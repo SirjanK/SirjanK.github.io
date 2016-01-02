@@ -80,12 +80,21 @@
   }
 })();
 function sendMail() {
-    var name = document.getElementById("email_name").value;
-    var email = document.getElementById("email_text").value;
-    var subject = document.getElementById("email_subject").value;
-    var message = name + '\n' + email + '\n' + document.getElementById("email_message").value;
+    var nameBox = document.getElementById("email_name");
+    var emailBox = document.getElementById("email_text");
+    var subjectBox = document.getElementById("email_subject");
+    var messageBox = document.getElementById("email_message");
+    var name = nameBox.value;
+    var email = emailBox.value;
+    var subject = subjectBox.value;
+    var message = name + '\n' + email + '\n' + messageBox.value;
 
     document.location.href = "mailto:sxkafle12@gmail.com?subject="
       + encodeURIComponent(subject)
       + "&body=" + encodeURIComponent(message);
+
+    nameBox.value = "";
+    emailBox.value = "";
+    subjectBox.value = "";
+    messageBox.value = "";
 }
