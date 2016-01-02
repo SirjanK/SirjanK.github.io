@@ -4,7 +4,7 @@
   "launch_path": "/index.html",
   "description": "Sirjan's Personal Site",
   "icons": {
-    "128": "/images/touch/icon-128x128.png"
+    "128": "/images/icons/icon_main.png"
   },
   "developer": {
     "name": "Sirjan Kafle",
@@ -18,8 +18,8 @@
   },
   "locales": {
     "en": {
-      "name": "Web Starter Kit",
-      "description": "A front-end template that helps you build fast, modern mobile web apps."
+      "name": "Sirjan Kafle Website",
+      "description": "Contains various projects and info"
     }
   }
 }
