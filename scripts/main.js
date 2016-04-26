@@ -1,22 +1,25 @@
-/*!
- *
- *  Web Starter Kit
- *  Copyright 2015 Google Inc. All rights reserved.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *    https://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License
- *
- */
-/* eslint-env browser */
+jQuery.noConflict();
+
+jQuery(document).ready(function() {
+
+    // Smooth Scroll
+    jQuery('.sscroll').bind('click.smoothscroll', function (e) {
+        e.preventDefault();
+        jQuery('.sscroll').parent().removeClass('active');
+        jQuery(this).parent().addClass('active');
+        jQuery('html,body').animate({
+            scrollTop: jQuery(this.hash).offset().top
+        }, 1200);
+    });
+
+    // Big Slide
+    jQuery('#home-slide').superslides({
+        animation: 'fade', // You can choose either fade or slide
+        play: 6000,
+        pagination: false
+    });
+});
+
 (function() {
   'use strict';
 
@@ -79,6 +82,7 @@
     });
   }
 })();
+
 function sendMail() {
     var nameBox = document.getElementById("email_name");
     var emailBox = document.getElementById("email_text");
