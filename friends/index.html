@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<head>
+<script>
+window.onload = function() {
+var season = Math.floor(Math.random() * 10) + 1;
+var epsiodeRange = 24;
+
+if (season == 6 || season == 3) {
+    episodeRange = 25;
+} else if (season == 10) {
+    episodeRange = 18;
+}
+
+var episode = Math.floor(Math.random() * episodeRange) + 1;
+var episodeStr = 'Season: ' + season + ' Episode: ' + episode;
+document.getElementById("friends").innerHTML = episodeStr;
+}
+</script>
+</head>
+
+<body>
+<h1>Watch (Refresh to get another):</h1>
+<p id="friends"></p>
+</body>
+</html>
